@@ -4,6 +4,8 @@ require 'minitest'
 
 module FizzBuzz
   def self.run
+    numbers = gets.split.map(&:to_i)
+    puts solve(*numbers).join("\n")
   end
 
   def self.solve(x, y, n)
@@ -37,5 +39,5 @@ end
 if ARGV[0] == "test"
   MiniTest.run
 else
-  FizzBuss.run
+  FizzBuzz.run
 end
