@@ -37,7 +37,7 @@ class DrinkTest < MiniTest::Test
 end
 
 if ARGV[0] == "test"
-  MiniTest.run
+  MiniTest.autorun
 else
   FizzBuzz.run
 end

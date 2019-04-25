@@ -72,7 +72,7 @@ class CalculatingDartScoresTest < MiniTest::Test
 end
 
 if ARGV[0] == "test"
-  MiniTest.run
+  MiniTest.autorun
 else
   CalculatingDartScores.run
 end
