@@ -9,9 +9,6 @@ module Carrots
 end
 
 class CarrotsTest < MiniTest::Test
-  def test_fail
-    assert false
-  end
 end
 
 if ARGV[0] == "test"
