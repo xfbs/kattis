@@ -13,7 +13,7 @@ module RacingAlphabet
     letters = str.split("")
     time = letters.size
     time += letters[0..-2]
-      .zip(letters[1..])
+      .zip(letters[1..-1])
       .map{|a, b| seconds(distance(slots(a, b)))}
       .sum
   end
