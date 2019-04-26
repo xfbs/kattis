@@ -20,7 +20,7 @@ module VariableArithmetic
 
   def self.encode(data, vars)
     sum = 0
-    unknown = data.filter do |l|
+    unknown = data.select do |l|
       !if l.class != String
         sum += l
       elsif vars[l]
