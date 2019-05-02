@@ -15,7 +15,7 @@ module SmallSchedule
     total_time = min_long.ceil * long_time
 
     # how much computing time is left after doing long slots
-    leftover = machines * (total_time - (min_long * long_time))
+    leftover = (machines * (total_time - (min_long * long_time))).round
 
     # subtract leftover from slots
     slots -= leftover
@@ -56,6 +56,9 @@ class SmallScheduleTest < MiniTest::Test
     # test time for combination
     assert_equal 4, SmallSchedule.solve(3, 3, 4, 2)
     assert_equal 6, SmallSchedule.solve(3, 3, 3, 5)
+
+    # big number
+    assert_equal 703946, SmallSchedule.solve(2, 3, 487484, 812177)
   end
 end
 
