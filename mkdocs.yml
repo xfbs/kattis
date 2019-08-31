@@ -1,0 +1,45 @@
+site_name: Kattis
+site_url: https://kattis.xfbs.net
+site_description: "Documentation for kattis solutions."
+site_author: Patrick M. Elsen
+copyright: 'Copyright &copy; 2019 Patrick M. Elsen'
+repo_name: 'xfbs/kattis'
+repo_url: 'https://github.com/xfbs/kattis'
+theme:
+  name: 'material'
+  palette:
+    primary: 'blue grey'
+    accent: 'blue'
+  logo:
+    icon: 'extension'
+  feature:
+    tabs: false
+nav:
+  - About: index.md
+  - Problems:
+    - mnist2class: problems/mnist2class.md
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js'
+  - 'https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'
+  - 'assets/katex.js'
+extra_css:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css'
+  - 'https://unpkg.com/mermaid@7.1.2/dist/mermaid.css'
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+
