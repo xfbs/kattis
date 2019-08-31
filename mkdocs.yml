@@ -27,6 +27,7 @@ extra_css:
   - 'https://unpkg.com/mermaid@7.1.2/dist/mermaid.css'
 markdown_extensions:
   - admonition
+  - extra
   - codehilite:
       guess_lang: false
   - toc:
