@@ -1,0 +1,1 @@
+t={};{2=>"abc",3=>"def",4=>"ghi",5=>"jkl",6=>"mno",7=>"pqrs",8=>"tuv",9=>"wxyz",0=>' '}.each{|n,c|c.chars.each_with_index{|c,i|t[c]=n.to_s*(i+1)}};gets.to_i.times{|i|d=gets.chomp.chars.map{|c| t[c]};d=d.zip(d[1..]).map{|c,n|c[-1]==(n||"")[0]?c+" ":c};puts "Case ##{i+1}: #{d.join}"}

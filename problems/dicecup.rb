@@ -1,3 +1,1 @@
-#!/usr/bin/env ruby
-faces = readline.chomp.split.map(&:to_i)
-puts faces.map{|f| (f-1)/2.0}.map{|f| [f.floor, f.ceil].uniq}.inject([0]){|a,b| a.product(b)}.map{|a| a.flatten[1..].sum}.uniq.sort
+n,m=gets.split.map(&:to_i);t=(1..n).map{|d| (1..m).map{|e| d+e}}.flatten.tally;m=t.max_by{|a,b|b}[1];puts t.filter{|a,b|b==m}.map{|a,b|a}
